@@ -1,19 +1,12 @@
+/* TEMA:INICIO (generado por tema.py) */
+:root { --marca: #0E5A7A; --apoyo: #F2A93B; --fondo: #F6F8FA; --fondo2: #E9EEF2; --tarjeta: #FFFFFF; --texto: #1E293B; --texto2: #52606D; --borde: #DDE3EA; --borde-campo: #8796A5; --sube: #15803D; --baja: #DC2626; --atencion: #B45309; --info: #2563EB; --naranja: #C2410C; --violeta: #7C3AED; --barra-lateral: #EEF2F5; --barra-lateral2: #E2E8EE; --marca-suave: #E3F0F5; --marca-oscuro: #0B3B4F; --acento: #F2A93B; --suave: #E9EEF2; --basico: #16A34A; --intermedio: #2563EB; --avanzado: #7C3AED; --letra: "Inter", "Source Sans 3", "Segoe UI", Arial, sans-serif; }
+@media (prefers-color-scheme: dark) { :root { --marca: #4FB3D9; --apoyo: #F5B754; --fondo: #0F172A; --fondo2: #1A2436; --tarjeta: #1A2436; --texto: #E2E8F0; --texto2: #A3B0C2; --borde: #2C3A50; --borde-campo: #3A4A60; --sube: #4ADE80; --baja: #F87171; --atencion: #FBBF24; --info: #60A5FA; --naranja: #FB923C; --violeta: #A78BFA; --barra-lateral: #0B1222; --barra-lateral2: #1A2436; --marca-suave: #12303D; --marca-oscuro: #CDE7F1; --acento: #F5B754; --suave: #22304A; --basico: #16A34A; --intermedio: #2563EB; --avanzado: #7C3AED; --letra: "Inter", "Source Sans 3", "Segoe UI", Arial, sans-serif; color-scheme: dark; } }
+/* TEMA:FIN */
 /* estilo.css - Página web de QUANTPULSE TRADER. Colores en variables (claro y oscuro): si se aprueba la paleta nueva,
    se cambian solo aquí. */
-:root {
-  --marca: #006D8F; --marca-oscuro: #0B3B4F; --marca-suave: #E3F1F6; --acento: #E39A1E;
-  --texto: #14232E; --texto2: #4A5B68; --fondo: #F7F9FB; --tarjeta: #FFFFFF; --borde: #D9E2EA; --suave: #E6ECF1;
-  --sube: #08794C; --baja: #C81E45; --basico: #16A34A; --intermedio: #2563EB; --avanzado: #7C3AED;
-  --f: "Inter", "Source Sans 3", "Segoe UI", Arial, sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root { --marca: #4FB3D9; --marca-oscuro: #CDE7F1; --marca-suave: #12303D; --acento: #F5B754;
-    --texto: #E4ECF1; --texto2: #A2B3BF; --fondo: #0F1A21; --tarjeta: #17252E; --borde: #2A3B47; --suave: #22323D;
-    --sube: #4ADE80; --baja: #F87171; --basico: #4ADE80; --intermedio: #60A5FA; --avanzado: #A78BFA; color-scheme: dark; }
-}
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-body { margin: 0; background: var(--fondo); color: var(--texto); font: 17px/1.6 var(--f); }
+body { margin: 0; background: var(--fondo); color: var(--texto); font: 17px/1.6 var(--letra); }
 a { color: var(--marca); }
 h1, h2, h3 { line-height: 1.15; text-wrap: balance; margin: 0 0 .5em; }
 h1 { font-size: clamp(32px, 5vw, 54px); font-weight: 800; letter-spacing: -.01em; }
@@ -42,7 +35,7 @@ p { margin: 0 0 .8em; }
   .cab nav a { white-space: nowrap; } }
 
 .boton { display: inline-block; background: var(--marca); color: #fff; font-weight: 700; text-decoration: none; border: 0;
-  border-radius: 10px; padding: 11px 20px; font: 700 16px var(--f); cursor: pointer; }
+  border-radius: 10px; padding: 11px 20px; font: 700 16px var(--letra); cursor: pointer; }
 @media (prefers-color-scheme: dark) { .boton { color: #0B1A22; } }
 .boton.sec { background: transparent; color: var(--marca); border: 2px solid var(--marca); }
 .boton.grande { padding: 14px 26px; font-size: 17px; }
@@ -70,8 +63,8 @@ p { margin: 0 0 .8em; }
 .destacada { border: 2px solid var(--acento); }
 .graficas figcaption { font-weight: 700; margin-bottom: 10px; }
 .graficas svg { width: 100%; height: auto; }
-.g-txt { font: 600 15px var(--f); fill: var(--texto); } .g-fuerte { font-weight: 800; }
-.g-chico { font: 12px var(--f); fill: var(--texto2); } .g-num { font: 800 18px var(--f); fill: var(--texto); }
+.g-txt { font: 600 15px var(--letra); fill: var(--texto); } .g-fuerte { font-weight: 800; }
+.g-chico { font: 12px var(--letra); fill: var(--texto2); } .g-num { font: 800 18px var(--letra); fill: var(--texto); }
 
 .curso { background: var(--tarjeta); border: 1px solid var(--borde); border-top: 8px solid var(--c); border-radius: 16px;
   padding: 22px; min-width: 0; }
@@ -94,7 +87,7 @@ td.num { font-variant-numeric: tabular-nums; font-weight: 700; }
 .etiqueta-lanz { display: inline-block; background: color-mix(in srgb, var(--acento) 22%, transparent); color: var(--texto);
   font-weight: 700; font-size: 13.5px; border-radius: 999px; padding: 3px 12px; }
 .pagos { display: grid; gap: 10px; margin-top: 14px; }
-.pago { display: block; width: 100%; border-radius: 10px; padding: 11px 14px; font: 700 15px var(--f); text-decoration: none;
+.pago { display: block; width: 100%; border-radius: 10px; padding: 11px 14px; font: 700 15px var(--letra); text-decoration: none;
   border: 2px solid var(--marca); background: var(--marca); color: #fff; cursor: pointer; }
 .pago[disabled] { background: transparent; color: var(--texto2); border: 2px dashed var(--borde); cursor: not-allowed; }
 
@@ -115,7 +108,7 @@ td.num { font-variant-numeric: tabular-nums; font-weight: 700; }
   background: var(--tarjeta); border-radius: 8px; }
 .aviso-edu { border-left: 4px solid var(--acento); padding: 10px 14px; background: var(--tarjeta); border-radius: 8px; }
 .copiar { margin-left: 8px; border: 1px solid var(--borde); background: var(--tarjeta); color: var(--texto); border-radius: 8px;
-  padding: 3px 10px; cursor: pointer; font: 600 13px var(--f); }
+  padding: 3px 10px; cursor: pointer; font: 600 13px var(--letra); }
 
 .pie { background: var(--marca-oscuro); color: #E3F1F6; padding-block: 30px; font-size: 15px; }
 @media (prefers-color-scheme: dark) { .pie { background: #0B1A22; } }
