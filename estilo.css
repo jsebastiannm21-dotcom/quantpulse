@@ -1,7 +1,10 @@
 /* TEMA:INICIO (generado por tema.py) */
-:root { --marca: #0E5A7A; --apoyo: #F2A93B; --fondo: #F6F8FA; --fondo2: #E9EEF2; --tarjeta: #FFFFFF; --texto: #1E293B; --texto2: #52606D; --borde: #DDE3EA; --borde-campo: #8796A5; --sube: #15803D; --baja: #DC2626; --atencion: #B45309; --info: #2563EB; --naranja: #C2410C; --violeta: #7C3AED; --barra-lateral: #EEF2F5; --barra-lateral2: #E2E8EE; --marca-suave: #E3F0F5; --marca-oscuro: #0B3B4F; --acento: #F2A93B; --suave: #E9EEF2; --basico: #16A34A; --intermedio: #2563EB; --avanzado: #7C3AED; --letra: "Inter", "Source Sans 3", "Segoe UI", Arial, sans-serif; }
-@media (prefers-color-scheme: dark) { :root { --marca: #4FB3D9; --apoyo: #F5B754; --fondo: #0F172A; --fondo2: #1A2436; --tarjeta: #1A2436; --texto: #E2E8F0; --texto2: #A3B0C2; --borde: #2C3A50; --borde-campo: #3A4A60; --sube: #4ADE80; --baja: #F87171; --atencion: #FBBF24; --info: #60A5FA; --naranja: #FB923C; --violeta: #A78BFA; --barra-lateral: #0B1222; --barra-lateral2: #1A2436; --marca-suave: #12303D; --marca-oscuro: #CDE7F1; --acento: #F5B754; --suave: #22304A; --basico: #16A34A; --intermedio: #2563EB; --avanzado: #7C3AED; --letra: "Inter", "Source Sans 3", "Segoe UI", Arial, sans-serif; color-scheme: dark; } }
+:root { --marca: #007C91; --apoyo: #FFB000; --fondo: #F3F7FB; --fondo2: #E3EBF3; --tarjeta: #FFFFFF; --texto: #0B1422; --texto2: #4A5A6E; --borde: #D3DEE9; --borde-campo: #7F91A6; --sube: #00804F; --baja: #D11A45; --atencion: #A86A00; --info: #0369A1; --naranja: #C2410C; --violeta: #0E7490; --barra-lateral: #E8EFF6; --barra-lateral2: #DAE4EE; --marca-suave: #DDF4F7; --marca-oscuro: #005F6F; --acento: #FFB000; --suave: #E3EBF3; --sobre-marca: #FFFFFF; --basico: #00A86B; --intermedio: #0891B2; --avanzado: #E59A00; --letra: "Inter", "Segoe UI", Arial, sans-serif; --letra-titulos: "Bebas Neue", "Inter", sans-serif; --letra-datos: "JetBrains Mono", Consolas, monospace; }
+@media (prefers-color-scheme: dark) { :root { --marca: #00F5FF; --apoyo: #FFB000; --fondo: #060912; --fondo2: #101C2D; --tarjeta: #0C1422; --texto: #ECF5FF; --texto2: #9FB0C5; --borde: #1C2A3E; --borde-campo: #2E4058; --sube: #00FF9C; --baja: #FF3864; --atencion: #FFB000; --info: #5CC8FF; --naranja: #FF8A3D; --violeta: #7DE3FF; --barra-lateral: #080D17; --barra-lateral2: #101C2D; --marca-suave: #0A2A33; --marca-oscuro: #B8FBFF; --acento: #FFB000; --suave: #152031; --sobre-marca: #001015; --basico: #00A86B; --intermedio: #0891B2; --avanzado: #E59A00; --letra: "Inter", "Segoe UI", Arial, sans-serif; --letra-titulos: "Bebas Neue", "Inter", sans-serif; --letra-datos: "JetBrains Mono", Consolas, monospace; color-scheme: dark; } }
 /* TEMA:FIN */
+/* Estilo de la presentación: títulos Bebas Neue, cifras JetBrains Mono */
+h1, h2, h3, h4 { font-family: var(--letra-titulos); font-weight: 400 !important; letter-spacing: .02em; }
+.num, .monto, .g-num, td.num, .cifra { font-family: var(--letra-datos); }   /* Cifras: JetBrains Mono */
 /* estilo.css - Página web de QUANTPULSE TRADER. Colores en variables (claro y oscuro): si se aprueba la paleta nueva,
    se cambian solo aquí. */
 * { box-sizing: border-box; }
@@ -9,7 +12,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 body { margin: 0; background: var(--fondo); color: var(--texto); font: 17px/1.6 var(--letra); }
 a { color: var(--marca); }
 h1, h2, h3 { line-height: 1.15; text-wrap: balance; margin: 0 0 .5em; }
-h1 { font-size: clamp(32px, 5vw, 54px); font-weight: 800; letter-spacing: -.01em; }
+h1 { font-size: clamp(32px, 5vw, 54px); font-weight: 800; letter-spacing: .02em; }
 h2 { font-size: clamp(26px, 3.4vw, 36px); font-weight: 800; color: var(--marca-oscuro); }
 h3 { font-size: 21px; }
 p { margin: 0 0 .8em; }
@@ -22,7 +25,7 @@ p { margin: 0 0 .8em; }
 .intro { max-width: 760px; color: var(--texto2); }
 
 .franja-aviso { background: var(--marca-oscuro); color: #fff; text-align: center; font-size: 13.5px; padding: 6px 12px; }
-@media (prefers-color-scheme: dark) { .franja-aviso { background: #0B3B4F; } }
+@media (prefers-color-scheme: dark) { .franja-aviso { background: #0C1422; } }
 .cab { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--fondo) 92%, transparent);
   backdrop-filter: blur(8px); border-bottom: 1px solid var(--borde); }
 .cab-fila { display: flex; align-items: center; gap: 22px; min-height: 66px; flex-wrap: wrap; padding-block: 8px; }
@@ -36,7 +39,7 @@ p { margin: 0 0 .8em; }
 
 .boton { display: inline-block; background: var(--marca); color: #fff; font-weight: 700; text-decoration: none; border: 0;
   border-radius: 10px; padding: 11px 20px; font: 700 16px var(--letra); cursor: pointer; }
-@media (prefers-color-scheme: dark) { .boton { color: #0B1A22; } }
+@media (prefers-color-scheme: dark) { .boton { color: #060912; } }
 .boton.sec { background: transparent; color: var(--marca); border: 2px solid var(--marca); }
 .boton.grande { padding: 14px 26px; font-size: 17px; }
 .boton:focus-visible, .pago:focus-visible, summary:focus-visible { outline: 3px solid var(--acento); outline-offset: 2px; }
@@ -110,8 +113,11 @@ td.num { font-variant-numeric: tabular-nums; font-weight: 700; }
 .copiar { margin-left: 8px; border: 1px solid var(--borde); background: var(--tarjeta); color: var(--texto); border-radius: 8px;
   padding: 3px 10px; cursor: pointer; font: 600 13px var(--letra); }
 
-.pie { background: var(--marca-oscuro); color: #E3F1F6; padding-block: 30px; font-size: 15px; }
-@media (prefers-color-scheme: dark) { .pie { background: #0B1A22; } }
-.pie a { color: #F5B754; } .pie .chico { color: #A9C6D3; }
-.pie .aviso-edu { background: rgba(255, 255, 255, .06); color: #E3F1F6; }
+.pie { background: var(--marca-oscuro); color: #ECF5FF; padding-block: 30px; font-size: 15px; }
+@media (prefers-color-scheme: dark) { .pie { background: #060912; } }
+.pie a { color: #FFB000; } .pie .chico { color: #9FB0C5; }
+.pie .aviso-edu { background: rgba(255, 255, 255, .06); color: #ECF5FF; }
 .graficas { align-items: start; }
+
+/* Al final para ganarle a los «font:» abreviados de arriba */
+.num, .monto, .g-num, td.num, .cifra { font-family: var(--letra-datos); }
