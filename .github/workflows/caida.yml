@@ -1,0 +1,36 @@
+# Aviso de caída: cada 30 minutos revisa si la app responde y avisa por el bot de Telegram de admin.
+# Vive en el repositorio público «quantpulse» (minutos gratis). Lo instala web/publicar.py desde web/github/.
+name: Aviso de caida
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github
+      - uses: actions/cache/restore@v4
+        with:
+          path: estado_caida.txt
+          key: estado-caida-${{ github.run_id }}
+          restore-keys: estado-caida-
+      - name: Revisar la app
+        run: python3 .github/caida.py
+        env:
+          APP_URL: "https://app-petroleo-2jsrncgu76vcg3kdfxjqyc.streamlit.app"
+          ADMIN_TELEGRAM_TOKEN: ${{ secrets.ADMIN_TELEGRAM_TOKEN }}
+          ADMIN_TELEGRAM_CHAT_ID: ${{ secrets.ADMIN_TELEGRAM_CHAT_ID }}
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: estado_caida.txt
+          key: estado-caida-${{ github.run_id }}
